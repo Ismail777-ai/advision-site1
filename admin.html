@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uz"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#07111f"><title>AdVision — Boshqaruv</title><link rel="stylesheet" href="style.css"></head>
+<body class="admin-page">
+<header class="site-header"><a class="brand" href="index.html">Ad<span>Vision</span><i>.</i></a><nav class="main-nav"><a href="index.html">Saytni ko‘rish</a><a href="index.html#articles">Maqolalar</a></nav><span class="admin-pill">ADMIN • BOSHQARUV</span></header>
+<main class="admin-container">
+  <div class="admin-welcome"><div><div class="eyebrow"><span class="eyebrow-line"></span> ISH STOLI</div><h1>Kontent <em>boshqaruvi</em></h1><p>Maqolalaringizni yarating, yangilang va tartibga soling.</p></div><a class="button-secondary" href="index.html">Saytga qaytish ↗</a></div>
+  <section class="admin-stats">
+    <div class="stat-card"><span>JAMI MAQOLALAR</span><strong id="totalArticles">0</strong><small>Platformadagi kontent</small></div>
+    <div class="stat-card"><span>TEXNOLOGIYA</span><strong id="technologyCount">0</strong><small>Texnologiya mavzulari</small></div>
+    <div class="stat-card"><span>BIZNES</span><strong id="businessCount">0</strong><small>Biznes mavzulari</small></div>
+    <div class="stat-card"><span>INTERNET</span><strong id="internetCount">0</strong><small>Internet mavzulari</small></div>
+  </section>
+  <div class="admin-columns">
+    <section class="admin-panel">
+      <div class="panel-heading"><div><span class="eyebrow">YANGI KONTENT</span><h2 id="formTitle">Maqola yaratish</h2></div><span class="panel-number">01</span></div>
+      <form id="articleForm">
+        <input type="hidden" id="articleId">
+        <label for="title">Maqola sarlavhasi</label><input id="title" type="text" placeholder="Masalan: Sun’iy intellekt kelajagi" required>
+        <label for="category">Kategoriya</label><select id="category"><option>Texnologiya</option><option>Biznes</option><option>Internet</option></select>
+        <label for="imageUrl">Muqova rasmi havolasi</label><input id="imageUrl" type="url" placeholder="https://... (rasm manzili)">
+        <small class="field-help">Rasm internetda ochiq bo‘lishi kerak. Unsplash kabi manbadan rasm havolasini kiriting.</small>
+        <label for="description">Qisqacha tavsif</label><textarea id="description" rows="3" placeholder="O‘quvchi maqolada nimalarni bilib oladi?" required></textarea>
+        <label for="content">Maqolaning to‘liq matni</label><textarea id="content" rows="9" placeholder="Matnni paragraflarga ajratib yozing..." required></textarea>
+        <div class="form-actions"><button class="button-primary" type="submit">Maqolani saqlash <span>→</span></button><button type="button" id="cancelEdit" class="button-secondary" hidden>Bekor qilish</button></div>
+      </form><p id="adminMessage" class="admin-message" role="status"></p>
+    </section>
+    <section class="admin-panel content-list-panel">
+      <div class="panel-heading"><div><span class="eyebrow">SAYTDAGI MAZMUN</span><h2>Maqolalar ro‘yxati</h2></div><span class="panel-number">02</span></div>
+      <div id="adminArticleList" class="admin-article-list"></div>
+    </section>
+  </div>
+  <div class="local-warning"><b>Sinov versiyasi haqida</b><p>Bu admin panel hozircha ma’lumotlarni faqat shu brauzerda saqlaydi. Sayt internetga joylanganda barcha tashrif buyuruvchilarga maqolalar ko‘rinishi va xavfsiz admin kirishi uchun server hamda ma’lumotlar bazasi kerak bo‘ladi.</p></div>
+</main>
+<footer class="site-footer"><div class="footer-bottom"><span>© 2026 AdVision</span><a href="index.html">Bosh sahifa</a><span>Admin boshqaruvi</span></div></footer>
+<script src="data.js"></script><script src="admin.js"></script>
+</body></html>
